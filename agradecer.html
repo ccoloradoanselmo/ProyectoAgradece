@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="body" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="body">
+
+    <div class="contenedor-login">
+        <form class="caja-login fondo-transparente" action="#">
+            <h2 class="titulo-login">Enviar mensaje</h2>
+
+            <!-- Campo Para: con select -->
+            <label for="para">Para:</label>
+            <select id="para" name="para" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; font-family: 'Montserrat', sans-serif;">
+                <option value="">Selecciona destinatario</option>
+                <option value="persona1">Persona 1</option>
+                <option value="persona2">Persona 2</option>
+                <option value="persona3">Persona 3</option>
+            </select>
+
+            <!-- Textarea -->
+            <label for="mensaje">Mensaje:</label>
+            <textarea class="textarea" id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." ></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+</html>

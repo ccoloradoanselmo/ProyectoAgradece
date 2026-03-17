@@ -1,0 +1,233 @@
+/* =========================
+   RESET Y ESTILOS GENERALES
+========================= */
+.body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+
+    /* Capas de fondo */
+    background-image: 
+        linear-gradient(-45deg, #f4e3c5, #fcd69c88, #fcb04c, #fde8c0), /* gradiente más sutil */
+        linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),  /* capa difuminada */
+        url(./Imagenes/loyola2.png); /* imagen destacada */
+
+    /* Ajustes de capas */
+    background-size: 400% 400%, cover, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: screen;
+
+    /* Animación suave del gradiente */
+    animation: gradient 15s ease infinite;
+}
+/* =========================
+   HEADER
+========================= */
+
+.titulo-superior {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-color: rgba(255,255,255,0.3); /* fondo semitransparente */
+    backdrop-filter: blur(10px);             /* desenfoque del fondo detrás */
+    -webkit-backdrop-filter: blur(10px);    /* Safari */
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.titulo-superior h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #f7770fcc;
+    text-align: center;
+    
+}
+
+.imagen-al-lado {
+    float: right;          /* mantiene la imagen a la derecha */
+    height: 50px;
+    position: relative;    /* permite mover la imagen sin afectar el texto */
+    right: 50px;           /* mueve la imagen hacia la izquierda */
+    top: 8px;              /* baja la imagen para alinearla verticalmente */
+}
+/* =========================
+   MAIN - LOGIN
+========================= */
+
+.contenedor-login {
+    position: relative;
+    height: 100%;
+}
+
+.caja-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 80px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+
+    background-color: rgba(255,255,255,0.3); /* fondo semitransparente */
+    backdrop-filter: blur(5px);             /* desenfoque del fondo detrás */
+    -webkit-backdrop-filter: blur(5px);    /* Safari */
+}
+
+.titulo-login {
+    color: #f7770fcc;
+}
+
+/* Inputs y botón */
+
+.caja-login input,
+.caja-login button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.caja-login input {
+    border: 1px solid #ccc;
+}
+
+.caja-login input:focus,
+.caja-login button:focus {
+    outline: none;
+    border-color: #ffa600;
+    box-shadow: 0 0 5px #ffa600;
+}
+
+.caja-login button {
+    background: #cf9237cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.caja-login button:hover {
+    background: #b16d35;
+}
+
+
+.textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.barra-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+
+    z-index: 10;
+}
+
+/* Logo */
+.logo {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.logo img {
+    height: 53px; /* MÁS GRANDE */
+}
+
+/* Menú */
+.menu {
+    float: right;
+    margin-right: 40px; /* lo separa del borde */
+    margin-top: 22px;
+}
+
+.menu a {
+    display: inline-block;
+    margin-left: 25px;
+    text-decoration: none;
+    color: #f7770fcc;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.menu a:hover {
+    color: #b16d35;
+}
+
+/* Limpiar floats */
+.clear {
+    clear: both;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido-principal {
+    margin-top: 140px; /* importante */
+    text-align: center;
+}
+
+/* Caja central */
+.caja-info {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.3); /* transparente ligera */
+    backdrop-filter: blur(10px); /* desenfoca lo que está detrás */
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+    padding: 60px;
+    border-radius: 15px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 10px 10px 60px rgba(0,0,0,0.2);
+}
+
+.caja-info h2 {
+    color: #f7770fcc;
+}
+
+.caja-info p {
+    color: #333;
+    line-height: 1.6;
+}
+/* =========================
+   ANIMACIÓN FONDO
+========================= */
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   FOOTER (preparado)
+========================= */
+
+footer {
+    /* preparado para contenido futuro */
+}
