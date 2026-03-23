@@ -24,7 +24,9 @@ function mostrar_alumnos(){
 
 
 
-
+/*
+    
+*/
 
     // PRUEBA 1: repetir 3 veces fetch_array
     /*for($i = 0; $i < 3; $i++){
