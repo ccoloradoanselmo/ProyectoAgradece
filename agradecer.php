@@ -16,8 +16,8 @@ function mostrar_alumnos(){
     $sql = "SELECT * FROM alumnos";
     $resultado = $conexion->query($sql);    
 
-    
-    //PRUEBA 2: repetir fetch_array() tantas veces como filas haya en la tabla alumnos
+   
+
     while($fila = $resultado->fetch_array()){
         echo '<option value="'.$fila["idAlumno"].'">'.$fila["nombre"].' - '.$fila["idAlumno"].'</option>';
     }
@@ -44,7 +44,6 @@ function mostrar_alumnos(){
 */
     $conexion->close();
 }
-
 ?>
 
 <!DOCTYPE html class="body">
