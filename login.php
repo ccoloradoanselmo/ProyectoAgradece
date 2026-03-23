@@ -15,7 +15,7 @@ $nombre = $_POST["nombre"];
 $password = $_POST["password"];
 
 
-$sql = "SELECT idAlumno from ALUMNO WHERE nombre ='".$nombre."' AND password='".$password."'";
+$sql = "SELECT idAlumno from alumnos WHERE nombre ='".$nombre."' AND password='".$password."'";
 //Antes del query se hace siempre esto
 
 //TAREA mostrar la consulta SQL
