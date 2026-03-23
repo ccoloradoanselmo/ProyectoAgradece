@@ -5,14 +5,14 @@
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     position: relative;
 
     /* Capas de fondo */
     background-image: 
         linear-gradient(-45deg, #f4e3c5, #fcd69c88, #fcb04c, #fde8c0), /* gradiente más sutil */
         linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),  /* capa difuminada */
-        url(./Imagenes/loyola2.png); /* imagen destacada */
+        url(./Imagenes/loyola2.png); 
 
     /* Ajustes de capas */
     background-size: 400% 400%, cover, cover;
@@ -86,6 +86,15 @@
     color: #f7770fcc;
 }
 
+.titulo-izquierda{
+     color: #f7770fcc;
+    float: left;
+    padding-right: 10px;
+}
+
+.select-izq{
+    float: left;
+}
 /* Inputs y botón */
 
 .caja-login input,
@@ -129,7 +138,15 @@
     border: 1px solid #ccc; 
     box-sizing: border-box; 
     font-family: 'Montserrat', sans-serif;
+    resize: none;
 }
+
+.textarea:focus{
+    outline: none;
+    border-color: #ffa600;
+    box-shadow: 0 0 5px #ffa600;
+}
+
 
 /* =========================
    HEADER
