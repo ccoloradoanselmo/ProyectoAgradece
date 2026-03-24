@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'configdb.php';
 
 // Función de conexión
@@ -19,7 +20,7 @@ function mostrar_alumnos(){
    
 
     while($fila = $resultado->fetch_array()){
-        echo '<option value="'.$fila["idAlumno"].'">'.$fila["nombre"].' - '.$fila["idAlumno"].'</option>';
+        echo '<option value="'.$fila["nombre"].'">'.$fila["nombre"].' - '.$fila["idAlumno"].'</option>';
     }
 
 
@@ -64,24 +65,24 @@ function mostrar_alumnos(){
     <header class="barra-superior">
 
         <div class="logo">
-            <a href="index.html">
+            <a href="inicio.html">
                 <img src="./Imagenes/logo-jesuitas.svg" alt="Jesuitas">
             </a>
         </div>
 
         <nav class="menu">
-            <a href="./agradecer.html">Agradecer</a>
+            <a href="./agradecer.php">Agradecer</a>
             <a href="#">Recibir</a>
-            <a href="./login.html">Cerrar sesión</a>
+            <a href="./index.html">Cerrar sesión</a>
         </nav>
 
     </header>
     <div class="contenedor-login">
-        <form class="caja-login" action="#">
+        <form class="caja-login" action="mensaje.php" method="POST">
             <h2 class="titulo-login">Enviar mensaje</h2>
             <!-- Campo Para: con select --> 
-            <b><label class="titulo-izquierda" for="para">Para:</label></b>
-            <select class="select-izq" id="para" name="para">
+            <b><label class="titulo-izquierda" for="nombre">Para:</label></b>
+            <select class="select-izq" id="nombre" name="nombre">
                 <?php
                     mostrar_alumnos();
                 ?>

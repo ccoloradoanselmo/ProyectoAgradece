@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require 'configdb.php';
 
 //Primero conectamos con la BD
@@ -23,8 +23,10 @@ $sql = "SELECT idAlumno from alumnos WHERE nombre ='".$nombre."' AND password='"
 $resultado = $conexion->query($sql);
 
 if($fila = $resultado->fetch_array()){
-    echo "Encontrado";
-    echo $fila["idAlumno"];
+	$_SESSION["idAlumno"] = $fila["idAlumno"];
+	header("Location: inicio.html");
+}else{
+	header("Location: login.html");
 }
 
 
