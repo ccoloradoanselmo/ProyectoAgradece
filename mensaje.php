@@ -12,15 +12,15 @@ $conexion = conectar();
 
 $mensaje = $_POST["mensaje"];
 $emisor = $_SESSION["idAlumno"];
-$receptor = $_POST["nombre"];
+$receptor = $_POST["idAlumno"];
 
 $sql = "INSERT INTO agradecimientos (mensaje, idEmisor, idReceptor) 
         VALUES ('".$mensaje."', ".$emisor.", ".$receptor.")";
 
-if($conexion->query($sql)
-   $switch = 1;
+if ($conexion->query($sql))
+    $switch = 1;
 else
-	$switch = 0;
+    $switch = 0;
 
 $conexion->close();
 ?>

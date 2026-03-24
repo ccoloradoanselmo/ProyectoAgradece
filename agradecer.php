@@ -20,7 +20,7 @@ function mostrar_alumnos(){
    
 
     while($fila = $resultado->fetch_array()){
-        echo '<option value="'.$fila["nombre"].'">'.$fila["nombre"].' - '.$fila["idAlumno"].'</option>';
+        echo '<option value="'.$fila["idAlumno"].'">'.$fila["nombre"].' - '.$fila["idAlumno"].'</option>';
     }
 
 
@@ -81,8 +81,8 @@ function mostrar_alumnos(){
         <form class="caja-login" action="mensaje.php" method="POST">
             <h2 class="titulo-login">Enviar mensaje</h2>
             <!-- Campo Para: con select --> 
-            <b><label class="titulo-izquierda" for="nombre">Para:</label></b>
-            <select class="select-izq" id="nombre" name="nombre">
+            <b><label class="titulo-izquierda" for="idAlumno">Para:</label></b>
+            <select class="select-izq" id="idAlumno" name="idAlumno">
                 <?php
                     mostrar_alumnos();
                 ?>
