@@ -50,7 +50,7 @@ $conexion->close();
         <nav class="menu">
             <a href="./agradecer.php">Agradecer</a>
             <a href="#">Recibir</a>
-            <a href="./index.html">Cerrar sesión</a>
+            <a href="./logout.php">Cerrar sesión</a>
         </nav>
 
     </header>
