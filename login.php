@@ -10,16 +10,25 @@ function conectar(){
 }
 
 //Antes de guardar nada, validamos que todo este correcto y que no pillemos correos o contraseñas invalidos (eso no lo hacemos todavia)
+
+$conexion = conectar();  
+
+
 $nombre = $_POST["nombre"];
 
 $password = $_POST["password"];
 
-
 $sql = "SELECT idAlumno from alumnos WHERE nombre ='".$nombre."' AND password='".$password."'";
 //Antes del query se hace siempre esto
+$resultado = $conexion->query($sql);
 
-//TAREA mostrar la consulta SQL
-echo $sql;
-echo '<br/>'
+if($fila = $resultado->fetch_array()){
+    echo "Encontrado";
+    echo $fila["idAlumno"];
+}
+
+
+$conexion->close();
 
 ?>
+
