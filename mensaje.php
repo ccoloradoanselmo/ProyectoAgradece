@@ -1,12 +1,28 @@
 <?php
-
+require 'configdb.php';
 session_start();
+
+function conectar(){
+    $conexion = new mysqli(SERVIDOR, USUARIO, PASSWORD, BBDD);
+    $conexion->set_charset("utf8"); 
+    return $conexion;
+}
+
+$conexion = conectar();
 
 $mensaje = $_POST["mensaje"];
 $emisor = $_SESSION["idAlumno"];
 $receptor = $_POST["nombre"];
 
+$sql = "INSERT INTO agradecimientos (mensaje, idEmisor, idReceptor) 
+        VALUES ('".$mensaje."', ".$emisor.", ".$receptor.")";
 
+if($conexion->query($sql)
+   $switch = 1;
+else
+	$switch = 0;
+
+$conexion->close();
 ?>
 
 
@@ -41,8 +57,9 @@ $receptor = $_POST["nombre"];
     <div class="contenido-principal">
 	<?php
 		echo "idEmisor: $emisor<br>";
-		echo "Receptor: $receptor<br>";
-		echo "Mensaje:\n$mensaje\n";
+		echo "idReceptor: $receptor<br>";
+		echo "Mensaje:  $mensaje<br>";
+		echo "Consulta: $switch";
 	?>
 	</div>
 	<br>
