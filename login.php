@@ -14,16 +14,16 @@ function conectar(){
 $conexion = conectar();  
 
 
-$nombre = $_POST["nombre"];
+$usuario = $_POST["usuario"];
 
 $password = $_POST["password"];
 
-$sql = "SELECT idAlumno from alumnos WHERE nombre ='".$nombre."' AND password='".$password."'";
+$sql = "SELECT equipo from alumnos WHERE usuario ='".$usuario."' AND password='".$password."'";
 //Antes del query se hace siempre esto
 $resultado = $conexion->query($sql);
 
 if($fila = $resultado->fetch_array()){
-	$_SESSION["idAlumno"] = $fila["idAlumno"];
+	$_SESSION["equipo"] = $fila["equipo"];
 	header("Location: inicio.html");
 }else{
 	header("Location: login.html");

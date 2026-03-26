@@ -2,40 +2,84 @@
    RESET Y ESTILOS GENERALES
 ========================= */
 .body {
+	margin: 0 auto;
     width: 100%;
     height: 100%;
-    margin: 0;
     font-family: 'Montserrat';
     position: relative;
 
-    /* Capas de fondo */
     background-image: 
-        linear-gradient(-45deg, #f4e3c5, #fcd69c88, #fcb04c, #fde8c0), /* gradiente más sutil */
-        linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),  /* capa difuminada */
+        linear-gradient(-45deg, #f4e3c5, #fcd69c88, #fcb04c, #fde8c0),
+        linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
         url(./Imagenes/loyola2.png); 
 
-    /* Ajustes de capas */
     background-size: 400% 400%, cover, cover;
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: screen;
 
-    /* Animación suave del gradiente */
     animation: gradient 15s ease infinite;
 }
+
 /* =========================
    HEADER
 ========================= */
+.barra-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
 
+.logo {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.logo img {
+    height: 53px;
+}
+
+.menu {
+    float: right;
+    margin-right: 40px;
+    margin-top: 22px;
+}
+
+.menu a {
+    display: inline-block;
+    margin-left: 25px;
+    text-decoration: none;
+    color: #f7770fcc;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.menu a:hover {
+    color: #b16d35;
+}
+
+.clear {
+    clear: both;
+}
+
+/* =========================
+   TITULO SUPERIOR
+========================= */
 .titulo-superior {
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
     
-    background-color: rgba(255,255,255,0.3); /* fondo semitransparente */
-    backdrop-filter: blur(10px);             /* desenfoque del fondo detrás */
-    -webkit-backdrop-filter: blur(10px);    /* Safari */
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 15px 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -46,20 +90,19 @@
     font-size: 2rem;
     color: #f7770fcc;
     text-align: center;
-    
 }
 
 .imagen-al-lado {
-    float: right;          /* mantiene la imagen a la derecha */
+    float: right;
     height: 50px;
-    position: relative;    /* permite mover la imagen sin afectar el texto */
-    right: 50px;           /* mueve la imagen hacia la izquierda */
-    top: 8px;              /* baja la imagen para alinearla verticalmente */
+    position: relative;
+    right: 50px;
+    top: 8px;
 }
+
 /* =========================
    MAIN - LOGIN
 ========================= */
-
 .contenedor-login {
     position: relative;
     height: 100%;
@@ -77,25 +120,24 @@
     width: 300px;
     text-align: center;
 
-    background-color: rgba(255,255,255,0.3); /* fondo semitransparente */
-    backdrop-filter: blur(5px);             /* desenfoque del fondo detrás */
-    -webkit-backdrop-filter: blur(5px);    /* Safari */
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .titulo-login {
     color: #f7770fcc;
 }
 
-.titulo-izquierda{
-     color: #f7770fcc;
+.titulo-izquierda {
+    color: #f7770fcc;
     float: left;
     padding-right: 10px;
 }
 
-.select-izq{
+.select-izq {
     float: left;
 }
-/* Inputs y botón */
 
 .caja-login input,
 .caja-login button {
@@ -130,92 +172,36 @@
     background: #b16d35;
 }
 
-
-.textarea{
+.textarea {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc; 
-    box-sizing: border-box; 
+    border: 1px solid #ccc;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     resize: none;
 }
 
-.textarea:focus{
+.textarea:focus {
     outline: none;
     border-color: #ffa600;
     box-shadow: 0 0 5px #ffa600;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
-.barra-superior {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-
-    z-index: 10;
-}
-
-/* Logo */
-.logo {
-    float: left;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.logo img {
-    height: 53px; /* MÁS GRANDE */
-}
-
-/* Menú */
-.menu {
-    float: right;
-    margin-right: 40px; /* lo separa del borde */
-    margin-top: 22px;
-}
-
-.menu a {
-    display: inline-block;
-    margin-left: 25px;
-    text-decoration: none;
-    color: #f7770fcc;
-    font-weight: bold;
-    font-size: 19px;
-}
-
-.menu a:hover {
-    color: #b16d35;
-}
-
-/* Limpiar floats */
-.clear {
-    clear: both;
-}
-
 /* =========================
    CONTENIDO
 ========================= */
-
 .contenido-principal {
-    margin-top: 140px; /* importante */
+    margin-top: 30px;
+    padding: 30px 40px;
     text-align: center;
 }
 
-/* Caja central */
 .caja-info {
     display: inline-block;
-    background-color: rgba(255,255,255,0.3); /* transparente ligera */
-    backdrop-filter: blur(10px); /* desenfoca lo que está detrás */
-    -webkit-backdrop-filter: blur(10px); /* Safari */
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 60px;
     border-radius: 15px;
     width: 500px;
@@ -231,20 +217,190 @@
     color: #333;
     line-height: 1.6;
 }
-/* =========================
-   ANIMACIÓN FONDO
-========================= */
 
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* =========================
+   AGRADECIMIENTO - DETALLE
+========================= */
+.layout-agradecimiento {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.columna-jesuita {
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+
+.caja-foto {
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 10px 10px 60px rgba(0,0,0,0.2);
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 300px;
+    margin-bottom: 20px;
+}
+
+.caja-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.caja-foto-placeholder {
+    color: #b16d35;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.6;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.columna-jesuita .caja-info {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+.columna-jesuita .caja-info h2 {
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.columna-jesuita .caja-info p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.columna-agradecimiento {
+    overflow: hidden;
+}
+
+.caja-agradecimiento {
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 10px 10px 60px rgba(0,0,0,0.2);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.titulo-para {
+    color: #f7770fcc;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(247, 119, 15, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.caja-mensaje {
+    width: 100%;
+    min-height: 310px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #e0c9a6;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    background-color: rgba(255,255,255,0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 /* =========================
-   FOOTER (preparado)
+   AGRADECIMIENTO - LISTADO
 ========================= */
+.cabecera-listado {
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+}
 
-footer {
-    /* preparado para contenido futuro */
+.cabecera-listado h2 {
+    color: #f7770fcc;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.cabecera-listado p {
+    color: #999;
+    font-size: 0.82rem;
+}
+
+.listado-agradecimientos {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.tarjeta-agradecimiento {
+    display: block;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.1);
+    border-left: 4px solid #f7770fcc;
+    margin-bottom: 14px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+
+    opacity: 0;
+    animation: entradaTarjeta 0.35s ease forwards;
+}
+
+.tarjeta-agradecimiento:nth-child(1) { animation-delay: 0.05s; }
+.tarjeta-agradecimiento:nth-child(2) { animation-delay: 0.12s; }
+.tarjeta-agradecimiento:nth-child(3) { animation-delay: 0.19s; }
+.tarjeta-agradecimiento:nth-child(4) { animation-delay: 0.26s; }
+.tarjeta-agradecimiento:nth-child(5) { animation-delay: 0.33s; }
+.tarjeta-agradecimiento:nth-child(n+6) { animation-delay: 0.4s; }
+
+.tarjeta-agradecimiento:hover {
+    transform: translateX(5px);
+    box-shadow: 8px 8px 35px rgba(0,0,0,0.16);
+    border-left-color: #b16d35;
+}
+
+.tarjeta-inner {
+    padding: 16px 22px;
+}
+
+.tarjeta-emisor {
+    float: left;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #f7770fcc;
+}
+
+.tarjeta-fecha {
+    float: right;
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-top: 2px;
+}
+
+@keyframes entradaTarjeta {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   ANIMACIÓN FONDO
+========================= */
+@keyframes gradient {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
